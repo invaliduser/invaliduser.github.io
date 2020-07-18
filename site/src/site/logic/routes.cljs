@@ -2,14 +2,15 @@
   (:require [reitit.frontend.easy :as rfe]
             [reitit.frontend :as rf]
             [site.pages.front :as front]
-            [site.pages.clojure-intro :refer [finished-tutorial]]))
+            [site.pages.clojure-intro :refer [finished-tutorial]]
+            [site.utils]))
 
 (def page-atom (atom front/splash))
 
 (def routes
-  [#_["/index.html"
+  [["/index.html"
     {:name ::def
-     :view finished-tutorial}]
+     :view site.utils/test-page}]
    ["/"
     {:name ::frontpage
      :view site.pages.front/splash}]
@@ -30,7 +31,6 @@
   (rfe/start!
     (rf/router routes)
     (fn [m]
-      (println "THIS IS THE m:" m)
       (reset! page-atom (or m front/splash)))
 
     ;; set to false to enable HistoryAPI
