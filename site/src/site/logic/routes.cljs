@@ -4,10 +4,13 @@
             [site.pages.front :as front]
             [site.pages.clojure-intro :refer [finished-tutorial]]))
 
-(def holder (atom front/splash))
+(def page-atom (atom front/splash))
 
 (def routes
-  [["/"
+  [#_["/index.html"
+    {:name ::def
+     :view finished-tutorial}]
+   ["/"
     {:name ::frontpage
      :view site.pages.front/splash}]
 
@@ -26,7 +29,9 @@
 (defn init! []
   (rfe/start!
     (rf/router routes)
-    (fn [m] (reset! holder m))
+    (fn [m]
+      (println "THIS IS THE m:" m)
+      (reset! page-atom (or m front/splash)))
 
     ;; set to false to enable HistoryAPI
     {:use-fragment false}))

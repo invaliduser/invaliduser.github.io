@@ -1,11 +1,17 @@
 (ns site.core
   (:require [rum.core :as rum]
-            [site.logic.routes :as routes]))
+            [site.logic.routes :as routes :refer [page-atom init!]]))
 
 
-(rum/defc main < rum/reactive [atm]
-  [:div ((rum/react routes/holder))])
+
+(init!)
+
+(rum/defc main < rum/reactive []
+  (let [component-f (get-in (rum/react page-atom)
+                            [:data :view])]
+    [:div (component-f)]))
 
 (rum/mount (main) (js/document.querySelector "#app"))
 
-(routes/init!)
+
+
