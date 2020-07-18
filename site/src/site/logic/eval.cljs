@@ -26,7 +26,8 @@
                                         ;but  i want to know what I'm getting in props
 
 
-
+;David Nolen on self-hosting                                       ;
+;https://clojurescript.org/guides/self-hosting
 
 (rum/defc parit < rum/reactive [code]
   [:div

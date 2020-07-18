@@ -10,7 +10,7 @@
 (def routes
   [["/index.html"
     {:name ::def
-     :view site.utils/test-page}]
+     :view finished-tutorial #_site.utils/test-page}]
    ["/"
     {:name ::frontpage
      :view site.pages.front/splash}]
@@ -34,4 +34,9 @@
       (reset! page-atom (or m front/splash)))
 
     ;; set to false to enable HistoryAPI
-    {:use-fragment false}))
+    #_{:use-fragment false}
+
+    {:use-fragment (if (= js/window.location.hostname"invaliduser.github.io")
+                     false
+                     true)}
+    ))

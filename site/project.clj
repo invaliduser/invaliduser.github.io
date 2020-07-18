@@ -54,11 +54,21 @@
                ;; production. You can build this with:
                ;; lein cljsbuild once min
                {:id "min"
+
+
+
+
+
+
+
+
+
                 :source-paths ["src"]
                 :compiler {:output-to "../site.js"
                            :main site.core
-                           :optimizations :advanced
-                           :pretty-print false}}]}
+                           :optimizations :simple #_:advanced
+                           :pretty-print true
+                           :static-fns true}}]}
 
   :figwheel {;; :http-server-root "public" ;; default and assumes "resources"
              ;; :server-port 3449 ;; default
