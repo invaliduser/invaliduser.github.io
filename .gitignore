@@ -16,3 +16,4 @@ pom.xml.asc
 *#
 *.log
 site/resources/public/js/*
+.#*

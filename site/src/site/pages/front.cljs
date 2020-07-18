@@ -24,6 +24,6 @@
 
 
 
-(rum/defc main []
+(rum/defc main < rum/reactive []
   [:div links-snippet
    byline])
