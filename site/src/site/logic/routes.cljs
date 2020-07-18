@@ -1,10 +1,10 @@
 (ns site.logic.routes
   (:require [reitit.frontend.easy :as rfe]
             [reitit.frontend :as rf]
-            [site.core]
+            [site.pages.front :as front]
             [site.pages.clojure-intro :refer [finished-tutorial]]))
 
-
+(def holder (atom front/splash))
 
 (def routes
   [["/"
@@ -26,8 +26,7 @@
 (defn init! []
   (rfe/start!
     (rf/router routes)
-    (fn [m] (reset! site.core/holder m))
-    ;; set to false to enable HistoryAPI
-    {:use-fragment true}))
+    (fn [m] (reset! holder m))
 
-(init!)
+    ;; set to false to enable HistoryAPI
+    {:use-fragment false}))

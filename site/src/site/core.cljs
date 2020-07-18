@@ -1,10 +1,11 @@
 (ns site.core
   (:require [rum.core :as rum]
-            [site.pages.front :as front]))
+            [site.logic.routes :as routes]))
 
-(def holder (atom front/splash))
 
 (rum/defc main < rum/reactive [atm]
-  [:div ((rum/react holder))])
+  [:div ((rum/react routes/holder))])
 
 (rum/mount (main) (js/document.querySelector "#app"))
+
+(routes/init!)
