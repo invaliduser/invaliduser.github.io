@@ -4,8 +4,7 @@
               [cljs.js :refer [empty-state eval js-eval]]
               [cljs.env :refer [*compiler*]]
               [cljs.pprint :refer [pprint]]
-              [clojure.string :as cljstr]
-              ))
+              [clojure.string :as cljstr]))
 
 
 (defn eval-form-from-string! [s]

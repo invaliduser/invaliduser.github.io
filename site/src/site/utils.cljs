@@ -5,3 +5,5 @@
   (-> s
       (md->hiccup)
       (component)))
+
+(mth "hi")

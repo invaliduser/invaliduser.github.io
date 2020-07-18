@@ -1,8 +1,6 @@
 (ns site.pages.front
   (:require [rum.core :as rum]
-            [site.utils :refer [mth]]
-            [site.logic.eval :refer [parit visible-parit]]
-            [site.pages.clojure-intro :refer [finished-tutorial]]))
+            [site.utils :refer [mth]]))
 
 #_((mth "Thought I'd write a bit here"))
 
@@ -24,6 +22,5 @@
 (rum/defc splash < rum/static []
   [:div
    intro
-   #_(visible-parit (atom "(+ 2 2)"))
    #_(finished-tutorial)
    ])

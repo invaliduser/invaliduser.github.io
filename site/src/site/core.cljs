@@ -4,10 +4,6 @@
 
 (def holder (atom front/splash))
 
-
-
-
-
 (rum/defc main < rum/reactive [atm]
   [:div ((rum/react holder))])
 
