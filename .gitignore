@@ -13,3 +13,6 @@ pom.xml.asc
 .nrepl-port
 .cpcache/
 *~
+*#
+*.log
+site/resources/public/js/*
