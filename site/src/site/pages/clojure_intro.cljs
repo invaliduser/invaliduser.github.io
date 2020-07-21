@@ -96,7 +96,7 @@ You can nest function calls.  Clojure evaluates the interior parens first:
 
 If you *don't* want Clojure to evaluate something in parens, you just add a single quote in front of it.  This just returns the parens and everything inside:
 
-  `%clb%'(+ 2 3)%cle%
+  %clb%'(+ 2 3)%cle%
 
   The first item is the `+` function, the next item is `2`, the third item is `3`.
 
