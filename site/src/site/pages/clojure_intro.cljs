@@ -76,11 +76,11 @@ The notation is: a pair of parentheses, with some stuff inside.  The first thing
 
 It turns out the \"operators\" you learned about in math---+, - / * --- are all functions
 
-  `%clb%(+ 2 3)%cle%
+  %clb%(+ 2 3)%cle%
   
   %clb%(* 5 2)%cle%
   
-  `%clb%(- 2 3)%cle%
+  %clb%(- 2 3)%cle%
 
   There's also a simple function we'll use for examples called `inc`.  `inc` stands for increment; it takes a number and returns the same number plus one.
 
