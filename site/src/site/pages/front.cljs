@@ -7,6 +7,7 @@
 (def socials {:hn ["hn" "https://news.ycombinator.com/threads?id=invalidOrTaken"]
             :twitter ["twitter" "https://twitter.com/DanBell"]
             :github ["github" "https://github.com/invaliduser/"]
+            :serious-blog ["blog" "https://thecobraeffect.blogspot.com"]
             :tao ["overwatch/sc2/hots" "https://calmongames.wordpress.com"]})
 
 (def socials-snippet
