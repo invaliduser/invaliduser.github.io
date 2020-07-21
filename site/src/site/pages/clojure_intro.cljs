@@ -76,28 +76,27 @@ The notation is: a pair of parentheses, with some stuff inside.  The first thing
 
 It turns out the \"operators\" you learned about in math---+, - / * --- are all functions
 
-  `(+ 2 3)      => 5`
+  `%clb%(+ 2 3)%cle%
   
-  `(* 5 2)      => 10`
+  %clb%(* 5 2)%cle%
   
-`(- 2 3)      => -1`
+  `%clb%(- 2 3)%cle%
 
   There's also a simple function we'll use for examples called `inc`.  `inc` stands for increment; it takes a number and returns the same number plus one.
 
-`(inc 3) => 4`
+  %clb%(inc 3)%cle%
 
-`(inc 4) => 5`
+  %clb%(inc 4)%cle%
 
 You can nest function calls.  Clojure evaluates the interior parens first: 
 
+  
 `(+ 2 (* 5 3))    =>   (+ 2 15) => 17`
-
-
 
 
 If you *don't* want Clojure to evaluate something in parens, you just add a single quote in front of it.  This just returns the parens and everything inside:
 
-`'(+ 2 3)    =>    (+ 2 3)`
+  `%clb%'(+ 2 3)%cle%
 
   The first item is the `+` function, the next item is `2`, the third item is `3`.
 
@@ -139,16 +138,16 @@ Clojure has a lot of functions that take lists and/or functions as inputs---
 
   `reverse` just takes a list and reverses it
 
-  %clb%(reverse '(1 2 3))%cle%  => (3 2 1)
+  %clb%(reverse '(1 2 3))%cle%  => `(3 2 1)`
 
   `filter` takes a function and a list, applies the function to every member of the list, and filters for the items that \"pass\" the input function
 
-  %clb%(even? 3)%cle%      => false
-  %clb%(even? 4)%cle%      =>  true
+  %clb%(even? 3)%cle%      `=> false`
+  %clb%(even? 4)%cle%      `=>  true`
 
-  %clb%(filter even? '(1 2 3 4 5 6 7 8))%cle%       =>     (2 4 6 8)
+  %clb%(filter even? '(1 2 3 4 5 6 7 8))%cle%       `=>     (2 4 6 8)`
 
-  %clb%(filter odd?  '(1 2 3 4 5 6 7 8))%cle%       =>     (1 3 5 7)
+  %clb%(filter odd?  '(1 2 3 4 5 6 7 8))%cle%       `=>     (1 3 5 7)`
 
 
   `take-while` takes a function and a list, and returns \"everything in the list, up until the first one that \"fails\" the input function\"
