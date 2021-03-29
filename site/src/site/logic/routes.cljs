@@ -1,6 +1,7 @@
 (ns site.logic.routes
   (:require [reitit.frontend.easy :as rfe]
             [reitit.frontend :as rf]
+            [site.pages.ds-exhibit :as de]
             [site.pages.front :as front]
             [site.pages.clojure-intro :refer [finished-tutorial]]
             [site.utils]))
@@ -15,6 +16,10 @@
     {:name ::frontpage
      :view site.pages.front/splash}]
 
+   ["/datascript"
+    {:name ::datascript
+     :view de/component}
+    ]
    ["/clj-tutorial"
     {:name ::clj-tutorial
      :view finished-tutorial}]

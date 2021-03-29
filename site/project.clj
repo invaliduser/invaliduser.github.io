@@ -7,6 +7,7 @@
                  [org.clojure/clojurescript "1.10.520"]
                  [rum "0.11.4"]
                  [markdown-to-hiccup "0.6.2"]
+                 [datascript "1.0.4"]
                  [markdown-clj "1.10.5"]
                  [metosin/reitit "0.5.5"]]
     :source-paths ["src"]
